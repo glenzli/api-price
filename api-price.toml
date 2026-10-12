@@ -1,6 +1,6 @@
 schema = "api-price/v1"
-catalog_version = "2026.09.23.1"
-updated_at = "2026-09-23T12:48:32+08:00"
+catalog_version = "2026.10.12.1"
+updated_at = "2026-10-12T18:58:49+08:00"
 currency = "USD"
 unit = "per_million_tokens"
 
@@ -57,7 +57,27 @@ checked_at = "2026-09-23"
 [[references]]
 id = "google-cloud-partner-models"
 url = "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing"
-checked_at = "2026-09-23"
+checked_at = "2026-10-12"
+
+[[references]]
+id = "openai-gpt-6.1-sol"
+url = "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+checked_at = "2026-10-12"
+
+[[references]]
+id = "openai-changelog"
+url = "https://developers.openai.com/api/docs/changelog"
+checked_at = "2026-10-12"
+
+[[references]]
+id = "google-cloud-claude-sonnet-5-5"
+url = "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5-5"
+checked_at = "2026-10-12"
+
+[[references]]
+id = "google-cloud-claude-haiku-5-5"
+url = "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5"
+checked_at = "2026-10-12"
 
 [[prices]]
 scope = "codex"
@@ -120,6 +140,17 @@ cached_input_per_million = 0.20
 cache_write_per_million = 2.50
 output_per_million = 10.00
 note = "Base standard text-token rates only; request-level long-context uplift is excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.1-sol"
+reference = "openai-gpt-6.1-sol"
+valid_from = "2026-09-29"
+input_per_million = 2.00
+cached_input_per_million = 0.10
+cache_write_per_million = 2.50
+output_per_million = 10.00
+note = "Standard short-context text-token rates (<=272K input tokens); long-context, Fast/Ultrafast, and regional uplifts excluded. Rates and launch date are documented in the OpenAI API changelog."
 
 [[prices]]
 scope = "codex"
@@ -361,6 +392,26 @@ input_per_million = 0.10
 cached_input_per_million = 0.01
 output_per_million = 0.40
 note = "Standard text-token rate; audio, cache storage, and tool charges excluded."
+
+[[prices]]
+scope = "antigravity"
+model = "claude-sonnet-5-5"
+reference = "google-cloud-partner-models"
+valid_from = "2026-09-28"
+input_per_million = 2.00
+cached_input_per_million = 0.10
+output_per_million = 10.00
+note = "Google Cloud global standard text-token rates; cache writes and regional uplift excluded. Exact model ID and release date are documented in the Sonnet 5.5 model reference."
+
+[[prices]]
+scope = "antigravity"
+model = "claude-haiku-5-5"
+reference = "google-cloud-partner-models"
+valid_from = "2026-10-07"
+input_per_million = 0.10
+cached_input_per_million = 0.01
+output_per_million = 0.50
+note = "Google Cloud global standard text-token rates for short context (<100K input tokens); the 5x long-context tier, cache writes, and regional uplift are excluded. Exact model ID and release date are documented in the Haiku 5.5 model reference."
 
 [[prices]]
 scope = "antigravity"
