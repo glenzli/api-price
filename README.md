@@ -9,6 +9,9 @@ multimodal input, regional processing, priority service, subscriptions, and
 request-level context uplifts remain out of scope unless a catalog row says
 otherwise.
 
+Latest full review: [2026-10-28](reviews/2026-10-28.md) — 44 exact model IDs,
+48 effective-dated price periods, including GPT-6.1 Terra.
+
 ## Files
 
 - `api-price.toml` is the source catalog.
