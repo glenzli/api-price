@@ -1,6 +1,6 @@
 schema = "api-price/v1"
-catalog_version = "2026.10.28.1"
-updated_at = "2026-10-28T22:54:51+08:00"
+catalog_version = "2026.11.12.1"
+updated_at = "2026-11-12T23:22:15+08:00"
 currency = "USD"
 unit = "per_million_tokens"
 
@@ -113,6 +113,36 @@ checked_at = "2026-10-28"
 id = "google-cloud-pricing-20261028"
 url = "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing"
 checked_at = "2026-10-28"
+
+[[references]]
+id = "openai-pricing-20261112"
+url = "https://developers.openai.com/api/docs/pricing"
+checked_at = "2026-11-12"
+
+[[references]]
+id = "google-gemini-pricing-20261112"
+url = "https://ai.google.dev/gemini-api/docs/pricing"
+checked_at = "2026-11-12"
+
+[[references]]
+id = "google-model-garden-pricing-20261112"
+url = "https://cloud.google.com/model-garden/pricing"
+checked_at = "2026-11-12"
+
+[[references]]
+id = "google-partner-pricing-20261112"
+url = "https://cloud.google.com/model-garden/partner-models/pricing"
+checked_at = "2026-11-12"
+
+[[references]]
+id = "google-gemini-4-carbon-public-launch"
+url = "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+checked_at = "2026-11-12"
+
+[[references]]
+id = "google-cloud-claude-fable-5-2"
+url = "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5-2"
+checked_at = "2026-11-12"
 
 [[prices]]
 scope = "codex"
@@ -600,3 +630,34 @@ cached_input_per_million = 0.05
 cache_write_per_million = 1.25
 output_per_million = 5.00
 note = "Standard short-context text-token rates (<=272K input tokens); cache writes use 30-minute retention. 12-hour cache writes, long-context, Fast, and regional uplifts excluded. Released October 26, 2026 in the OpenAI API changelog."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-carbon"
+reference = "google-gemini-pricing-20261112"
+valid_from = "2026-11-10"
+valid_until = "2026-11-30"
+input_per_million = 2.00
+cached_input_per_million = 0.10
+output_per_million = 10.00
+note = "Public API launch November 10, 2026; introductory Standard text pricing through November 30. Implicit caching only; output includes thinking."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-carbon"
+reference = "google-gemini-pricing-20261112"
+valid_from = "2026-12-01"
+input_per_million = 4.00
+cached_input_per_million = 0.20
+output_per_million = 20.00
+note = "Published post-introductory Standard text pricing from December 1, 2026. Implicit caching only; output includes thinking."
+
+[[prices]]
+scope = "antigravity"
+model = "claude-fable-5-2"
+reference = "google-partner-pricing-20261112"
+valid_from = "2026-11-09"
+input_per_million = 8.00
+cached_input_per_million = 0.20
+output_per_million = 40.00
+note = "Google Cloud global Standard text reference from the November 9, 2026 release. Cache writes, Fast mode, tools and regional uplifts remain excluded."

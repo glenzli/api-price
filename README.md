@@ -9,8 +9,9 @@ multimodal input, regional processing, priority service, subscriptions, and
 request-level context uplifts remain out of scope unless a catalog row says
 otherwise.
 
-Latest full review: [2026-10-28](reviews/2026-10-28.md) — 44 exact model IDs,
-48 effective-dated price periods, including GPT-6.1 Terra.
+Latest review: [2026-11-12](reviews/2026-11-12.md) — 46 exact model IDs,
+51 effective-dated price periods, including Gemini 4 Carbon and Claude Fable 5.2.
+The [2026-10-28 review](reviews/2026-10-28.md) records the unchanged earlier periods.
 
 ## Files
 
@@ -48,4 +49,5 @@ Current source references include:
 
 - [OpenAI model pricing](https://developers.openai.com/api/docs/models)
 - [Gemini Developer API pricing](https://ai.google.dev/gemini-api/docs/pricing)
-- [Google Cloud partner-model pricing](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing)
+- [Google Cloud Gemini pricing](https://cloud.google.com/model-garden/pricing)
+- [Google Cloud partner-model pricing](https://cloud.google.com/model-garden/partner-models/pricing)
