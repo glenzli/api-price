@@ -9,9 +9,10 @@ multimodal input, regional processing, priority service, subscriptions, and
 request-level context uplifts remain out of scope unless a catalog row says
 otherwise.
 
-Latest review: [2026-11-12](reviews/2026-11-12.md) — 46 exact model IDs,
-51 effective-dated price periods, including Gemini 4 Carbon and Claude Fable 5.2.
-The [2026-10-28 review](reviews/2026-10-28.md) records the unchanged earlier periods.
+Latest review: [2026-11-15](reviews/2026-11-15.md) — 114 model IDs and aliases,
+140 scope/model keys and 183 effective-dated or qualified price periods
+across 11 provider scopes, plus the existing client scopes.
+The [2026-11-12 review](reviews/2026-11-12.md) retains the preceding rates.
 
 ## Files
 
@@ -40,10 +41,21 @@ For a reproducible build, replace `latest` with `download/<tag>`.
 
 ## Catalog contract
 
-`scope` and `model` form an exact lookup key. Date ranges are inclusive and
-must not overlap for the same key. Rates are USD per one million text tokens.
-`cache_write_per_million` is optional because not every provider publishes a
-separate cache-write rate.
+`scope` and `model` form an exact lookup key. Supported provider scopes are
+`openai`, `google`, `anthropic`, `deepseek`, `qwen`, `zai`, `kimi`, `minimax`,
+`xai`, `mistral`, and `cohere`; `codex`, `antigravity` and `claude-code` retain
+explicit client references. A scope is not inferred from a neighboring model name.
+
+Date and optional request-input ranges are inclusive. `rate_tier` selects a named
+service/context or peak/off-peak band. Qualified ranges cannot overlap. A consumer
+needs single-request input counts and the applicable tier; missing conditions
+must not select a cheaper tariff from daily/session totals. MiniMax's ambiguous
+512k unit stays in explicit named bands, rather than an invented numeric bound.
+
+Rates are USD per million text tokens. `cached_input_per_million` and
+`cache_write_per_million` are optional provider fields: absence means unknown,
+not zero. Existing client scopes require the cache-read reference. Write fees
+that vary by TTL are not collapsed into an unspecified single price.
 
 Current source references include:
 
