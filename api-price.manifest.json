@@ -1,8 +1,8 @@
 {
   "schema": "api-price-manifest/v1",
   "catalog_schema": "api-price/v1",
-  "catalog_version": "2026.11.19.1",
+  "catalog_version": "2026.11.19.2",
   "asset": "api-price.toml",
-  "size": 119366,
-  "sha256": "310962b0ae8f49b3fa6a1f34d60360339ccf88ab7041ea692690a105a39fac4b"
+  "size": 120838,
+  "sha256": "5f2ce33420c672e78751224b12bf2d66706f8a69a100f06d78c9a143f44c8474"
 }

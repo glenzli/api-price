@@ -1,6 +1,6 @@
 schema = "api-price/v1"
-catalog_version = "2026.11.19.1"
-updated_at = "2026-11-19T12:00:00+08:00"
+catalog_version = "2026.11.19.2"
+updated_at = "2026-11-19T12:36:32+08:00"
 currency = "USD"
 unit = "per_million_tokens"
 
@@ -332,6 +332,11 @@ checked_at = "2026-11-19"
 [[references]]
 id = "provider-mistral-deepseek-20261119"
 url = "https://docs.mistral.ai/models/deepseek-v4-flash-1017"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "codex-ordinary-context-reference-20261119"
+url = "https://developers.openai.com/api/docs/pricing"
 checked_at = "2026-11-19"
 
 [[prices]]
@@ -2373,6 +2378,7 @@ output_per_million = 40
 cached_input_per_million = 0.4
 request_input_min = 0
 request_input_max = 272000
+rate_tier = "standard-short-context"
 note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
 
 [[prices]]
@@ -2437,6 +2443,7 @@ input_per_million = 16
 output_per_million = 60.0
 cached_input_per_million = 0.8
 request_input_min = 272001
+rate_tier = "standard-long-context"
 note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
 
 [[prices]]
@@ -2623,6 +2630,7 @@ output_per_million = 10
 cached_input_per_million = 0.1
 request_input_min = 0
 request_input_max = 272000
+rate_tier = "standard-short-context"
 note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
 
 [[prices]]
@@ -2687,6 +2695,7 @@ input_per_million = 4
 output_per_million = 15.0
 cached_input_per_million = 0.2
 request_input_min = 272001
+rate_tier = "standard-long-context"
 note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
 
 [[prices]]
@@ -2981,3 +2990,23 @@ output_per_million = 3.75
 cached_input_per_million = 0.075
 valid_until = "2026-12-31"
 note = "Official retired-ID redirect begins December 1, 2026 and is billed as Gemini 3.8 Flash. The existing January 2027 period retains the announced later Flash rates."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "codex-ordinary-context-reference-20261119"
+valid_from = "2026-11-17"
+input_per_million = 8
+cached_input_per_million = 0.4
+output_per_million = 40
+note = "Codex default API-equivalent valuation uses ordinary-context Standard rates, not a long-context uplift. This reference is available from model launch, using the currently documented rate; it does not verify a historical invoice, request length, service tier or cache-write TTL. Full request-qualified tariffs remain in the OpenAI scope and explicit client context tiers."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "codex-ordinary-context-reference-20261119"
+valid_from = "2026-11-17"
+input_per_million = 2
+cached_input_per_million = 0.1
+output_per_million = 10
+note = "Codex default API-equivalent valuation uses ordinary-context Standard rates, not a long-context uplift. This reference is available from model launch, using the currently documented rate; it does not verify a historical invoice, request length, service tier or cache-write TTL. Full request-qualified tariffs remain in the OpenAI scope and explicit client context tiers."

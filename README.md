@@ -10,7 +10,7 @@ request-level context uplifts remain out of scope unless a catalog row says
 otherwise.
 
 Latest review: [2026-11-19](reviews/2026-11-19.md) — 122 model IDs and aliases,
-151 scope/model keys and 245 effective-dated or qualified price periods
+151 scope/model keys and 247 effective-dated or qualified price periods
 across 11 provider scopes, plus the existing client scopes.
 The [2026-11-15 review](reviews/2026-11-15.md) and
 [2026-11-12 review](reviews/2026-11-12.md) retain the preceding references.
