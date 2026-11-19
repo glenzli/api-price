@@ -1,6 +1,6 @@
 schema = "api-price/v1"
-catalog_version = "2026.11.15.2"
-updated_at = "2026-11-15T10:03:03+08:00"
+catalog_version = "2026.11.19.1"
+updated_at = "2026-11-19T12:00:00+08:00"
 currency = "USD"
 unit = "per_million_tokens"
 
@@ -233,6 +233,106 @@ checked_at = "2026-11-15"
 id = "provider-cohere-r-20261115"
 url = "https://docs.cohere.com/changelog/command-gets-refreshed"
 checked_at = "2026-11-15"
+
+[[references]]
+id = "provider-openai-20261119"
+url = "https://developers.openai.com/api/docs/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-google-20261119"
+url = "https://aistudio.google.com/docs/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-anthropic-20261119"
+url = "https://platform.claude.com/docs/en/about-claude/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-deepseek-20261119"
+url = "https://api-docs.deepseek.com/quick_start/pricing/"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-qwen-20261119"
+url = "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-zai-20261119"
+url = "https://docs.z.ai/guides/overview/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-kimi-20261119"
+url = "https://platform.kimi.ai/"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-minimax-20261119"
+url = "https://platform.minimax.io/docs/pricing/overview"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-xai-20261119"
+url = "https://docs.x.ai/developers/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-mistral-20261119"
+url = "https://docs.mistral.ai/inference/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-cohere-20261119"
+url = "https://cohere.com/pricing"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-openai-astra-20261119"
+url = "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-openai-sol-20261119"
+url = "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-openai-release-20261119"
+url = "https://developers.openai.com/api/docs/changelog"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-neon-launch-20261119"
+url = "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-qwen4-launch-20261119"
+url = "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-qwen4-model-20261119"
+url = "https://www.alibabacloud.com/help/en/model-studio/qwen4-max"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-mistral-glm-flash-20261119"
+url = "https://docs.mistral.ai/models/zai-glm-5-3-flash"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-mistral-glm-20261119"
+url = "https://docs.mistral.ai/models/zai-glm-5-3"
+checked_at = "2026-11-19"
+
+[[references]]
+id = "provider-mistral-deepseek-20261119"
+url = "https://docs.mistral.ai/models/deepseek-v4-flash-1017"
+checked_at = "2026-11-19"
 
 [[prices]]
 scope = "codex"
@@ -946,7 +1046,7 @@ valid_from = "2026-11-15"
 input_per_million = 0.75
 output_per_million = 3.75
 cached_input_per_million = 0.075
-valid_until = "2026-12-31"
+valid_until = "2026-11-18"
 note = "The current Google API pricing page says the retired Gemini 2.5 Pro ID is served and billed as Gemini 3.8 Flash. This redirect reference is recorded from the November 15 review, without backdating the provider change."
 
 [[prices]]
@@ -967,7 +1067,7 @@ valid_from = "2026-11-15"
 input_per_million = 0.75
 output_per_million = 3.75
 cached_input_per_million = 0.075
-valid_until = "2026-12-31"
+valid_until = "2026-11-18"
 note = "The current Google API pricing page says the retired Gemini 2.5 Pro ID is served and billed as Gemini 3.8 Flash. This redirect reference is recorded from the November 15 review, without backdating the provider change."
 
 [[prices]]
@@ -2137,3 +2237,747 @@ valid_from = "2026-11-15"
 input_per_million = 0.15
 output_per_million = 0.6
 note = "Published Cohere Command R August refresh token rates; this exact model remains listed in the model catalog. Cached-input rates are unspecified. No Command A+ price is inferred from another model."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8
+output_per_million = 40
+cached_input_per_million = 0.4
+request_input_min = 0
+request_input_max = 272000
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4.0
+output_per_million = 20.0
+cached_input_per_million = 0.2
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 16
+output_per_million = 80
+cached_input_per_million = 0.8
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 24
+output_per_million = 120
+cached_input_per_million = 1.2000000000000002
+valid_until = "2027-02-28"
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2027-03-02"
+input_per_million = 48
+output_per_million = 240
+cached_input_per_million = 2.4000000000000004
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 16
+output_per_million = 60.0
+cached_input_per_million = 0.8
+request_input_min = 272001
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8.0
+output_per_million = 30.0
+cached_input_per_million = 0.4
+request_input_min = 272001
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 32
+output_per_million = 120.0
+cached_input_per_million = 1.6
+request_input_min = 272001
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 48
+output_per_million = 180.0
+cached_input_per_million = 2.4000000000000004
+valid_until = "2027-02-28"
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2027-03-02"
+input_per_million = 96
+output_per_million = 360.0
+cached_input_per_million = 4.800000000000001
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8
+output_per_million = 40
+cached_input_per_million = 0.4
+request_input_min = 0
+request_input_max = 272000
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4.0
+output_per_million = 20.0
+cached_input_per_million = 0.2
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 16
+output_per_million = 80
+cached_input_per_million = 0.8
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 24
+output_per_million = 120
+cached_input_per_million = 1.2000000000000002
+valid_until = "2027-02-28"
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2027-03-02"
+input_per_million = 48
+output_per_million = 240
+cached_input_per_million = 2.4000000000000004
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 16
+output_per_million = 60.0
+cached_input_per_million = 0.8
+request_input_min = 272001
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8.0
+output_per_million = 30.0
+cached_input_per_million = 0.4
+request_input_min = 272001
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 32
+output_per_million = 120.0
+cached_input_per_million = 1.6
+request_input_min = 272001
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2026-11-19"
+input_per_million = 48
+output_per_million = 180.0
+cached_input_per_million = 2.4000000000000004
+valid_until = "2027-02-28"
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-astra"
+reference = "provider-openai-astra-20261119"
+valid_from = "2027-03-02"
+input_per_million = 96
+output_per_million = 360.0
+cached_input_per_million = 4.800000000000001
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2
+output_per_million = 10
+cached_input_per_million = 0.1
+request_input_min = 0
+request_input_max = 272000
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.0
+output_per_million = 5.0
+cached_input_per_million = 0.05
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4
+output_per_million = 20
+cached_input_per_million = 0.2
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 6
+output_per_million = 30
+cached_input_per_million = 0.30000000000000004
+valid_until = "2027-02-28"
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2027-03-02"
+input_per_million = 12
+output_per_million = 60
+cached_input_per_million = 0.6000000000000001
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4
+output_per_million = 15.0
+cached_input_per_million = 0.2
+request_input_min = 272001
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2.0
+output_per_million = 7.5
+cached_input_per_million = 0.1
+request_input_min = 272001
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8
+output_per_million = 30.0
+cached_input_per_million = 0.4
+request_input_min = 272001
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 12
+output_per_million = 45.0
+cached_input_per_million = 0.6000000000000001
+valid_until = "2027-02-28"
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "openai"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2027-03-02"
+input_per_million = 24
+output_per_million = 90.0
+cached_input_per_million = 1.2000000000000002
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2
+output_per_million = 10
+cached_input_per_million = 0.1
+request_input_min = 0
+request_input_max = 272000
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.0
+output_per_million = 5.0
+cached_input_per_million = 0.05
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4
+output_per_million = 20
+cached_input_per_million = 0.2
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 6
+output_per_million = 30
+cached_input_per_million = 0.30000000000000004
+valid_until = "2027-02-28"
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2027-03-02"
+input_per_million = 12
+output_per_million = 60
+cached_input_per_million = 0.6000000000000001
+request_input_min = 0
+request_input_max = 272000
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 4
+output_per_million = 15.0
+cached_input_per_million = 0.2
+request_input_min = 272001
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2.0
+output_per_million = 7.5
+cached_input_per_million = 0.1
+request_input_min = 272001
+rate_tier = "batch"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 8
+output_per_million = 30.0
+cached_input_per_million = 0.4
+request_input_min = 272001
+rate_tier = "fast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2026-11-19"
+input_per_million = 12
+output_per_million = 45.0
+cached_input_per_million = 0.6000000000000001
+valid_until = "2027-02-28"
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "codex"
+model = "gpt-6.2-sol"
+reference = "provider-openai-sol-20261119"
+valid_from = "2027-03-02"
+input_per_million = 24
+output_per_million = 90.0
+cached_input_per_million = 1.2000000000000002
+request_input_min = 272001
+rate_tier = "ultrafast"
+note = "Global text API reference, checked Nov 19. Single-request input including cache above 272,000 doubles input/cache and multiplies output by 1.5 for the full request. Daily/session totals cannot select a band. Cache writes require 30m/12h TTL and remain unspecified. Regional and background discounts are excluded. Ultrafast is 3x through Feb 28, 2027 Pacific, then 6x. Mar 1 is unpriced in this day-only catalog; timestamp-aware pricing is required at that boundary."
+
+[[prices]]
+scope = "google"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-18"
+input_per_million = 3
+output_per_million = 15
+cached_input_per_million = 0.15
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "google"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.5
+output_per_million = 7.5
+cached_input_per_million = 0.075
+rate_tier = "batch"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "google"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.5
+output_per_million = 7.5
+cached_input_per_million = 0.075
+rate_tier = "flex"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "google"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 5.4
+output_per_million = 27
+cached_input_per_million = 0.27
+rate_tier = "priority"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-18"
+input_per_million = 3
+output_per_million = 15
+cached_input_per_million = 0.15
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.5
+output_per_million = 7.5
+cached_input_per_million = 0.075
+rate_tier = "batch"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.5
+output_per_million = 7.5
+cached_input_per_million = 0.075
+rate_tier = "flex"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-4-neon"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 5.4
+output_per_million = 27
+cached_input_per_million = 0.27
+rate_tier = "priority"
+note = "Published text-token API reference; output already includes thinking. Implicit cache only. The November 18 launch confirms Standard availability and rates. Known effort markers do not create a different model tariff. Tool fees, media and private discounts are excluded."
+
+[[prices]]
+scope = "qwen"
+model = "qwen4-max"
+reference = "provider-qwen4-model-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.5
+output_per_million = 4.5
+cached_input_per_million = 0.075
+note = "Alibaba Cloud International deployment through Singapore; text input/output and documented explicit/implicit cache-hit rates. Mainland/Global regional prices are distinct and are not substituted. All supported request lengths use this price. Cache creation depends on 5m/1h TTL and remains unspecified; Token Plan preview credits do not establish an API tariff."
+
+[[prices]]
+scope = "qwen"
+model = "qwen3.7-plus"
+reference = "provider-qwen-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.32
+output_per_million = 1.28
+valid_until = "2026-11-19"
+request_input_min = 0
+request_input_max = 256000
+note = "International deployment snapshot of the documented temporary 20% discount. The end date is not published, so only this checked day is covered; November 16-18 are not backfilled. Unknown cache mode fees remain unspecified."
+
+[[prices]]
+scope = "qwen"
+model = "qwen3.7-plus"
+reference = "provider-qwen-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.96
+output_per_million = 3.84
+valid_until = "2026-11-19"
+request_input_min = 256001
+request_input_max = 1000000
+note = "International deployment snapshot of the documented temporary 20% discount. The end date is not published, so only this checked day is covered; November 16-18 are not backfilled. Unknown cache mode fees remain unspecified."
+
+[[prices]]
+scope = "deepseek"
+model = "deepseek-flash"
+reference = "provider-deepseek-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.3
+output_per_million = 1.2
+cached_input_per_million = 0.006
+rate_tier = "peak"
+note = "Official current API alias for DeepSeek-V4.1-Flash-1017. Native legacy Flash aliases remain accepted. Peak is 01:00-04:00 and 06:00-10:00 UTC on weekdays excluding Chinese public holidays; the caller must identify the applicable tier. No holiday decision from daily totals."
+
+[[prices]]
+scope = "deepseek"
+model = "deepseek-flash"
+reference = "provider-deepseek-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.15
+output_per_million = 0.6
+cached_input_per_million = 0.003
+rate_tier = "off-peak"
+note = "Official current API alias for DeepSeek-V4.1-Flash-1017. Native legacy Flash aliases remain accepted. Peak is 01:00-04:00 and 06:00-10:00 UTC on weekdays excluding Chinese public holidays; the caller must identify the applicable tier. No holiday decision from daily totals."
+
+[[prices]]
+scope = "mistral"
+model = "zai-glm-5-3-flash"
+reference = "provider-mistral-glm-flash-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.15
+output_per_million = 0.5
+cached_input_per_million = 0.03
+note = "Exact Mistral-hosted API model ID and Mistral Standard USD text tariff. These cache rates are distinct from the original provider and must not be matched by family name."
+
+[[prices]]
+scope = "mistral"
+model = "zai-glm-5-3"
+reference = "provider-mistral-glm-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.4
+output_per_million = 4.4
+cached_input_per_million = 0.14
+note = "Exact Mistral-hosted API model ID and Mistral Standard USD text tariff. These cache rates are distinct from the original provider and must not be matched by family name."
+
+[[prices]]
+scope = "mistral"
+model = "deepseek-v4-1-flash-1017"
+reference = "provider-mistral-deepseek-20261119"
+valid_from = "2026-11-19"
+input_per_million = 0.3
+output_per_million = 1.2
+cached_input_per_million = 0.007
+note = "Exact Mistral-hosted API model ID and Mistral Standard USD text tariff. These cache rates are distinct from the original provider and must not be matched by family name."
+
+[[prices]]
+scope = "google"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.25
+output_per_million = 10
+cached_input_per_million = 0.125
+valid_until = "2026-11-30"
+request_input_min = 0
+request_input_max = 200000
+note = "The November 19 official notice dates API redirection to December 1, 2026. Until then the Pro single-request 200K tariff applies. This new observation does not rewrite November 15-18 historical estimates from the previous notice."
+
+[[prices]]
+scope = "google"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2.5
+output_per_million = 15
+cached_input_per_million = 0.25
+valid_until = "2026-11-30"
+request_input_min = 200001
+note = "The November 19 official notice dates API redirection to December 1, 2026. Until then the Pro single-request 200K tariff applies. This new observation does not rewrite November 15-18 historical estimates from the previous notice."
+
+[[prices]]
+scope = "google"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-12-01"
+input_per_million = 0.75
+output_per_million = 3.75
+cached_input_per_million = 0.075
+valid_until = "2026-12-31"
+note = "Official retired-ID redirect begins December 1, 2026 and is billed as Gemini 3.8 Flash. The existing January 2027 period retains the announced later Flash rates."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 1.25
+output_per_million = 10
+cached_input_per_million = 0.125
+valid_until = "2026-11-30"
+request_input_min = 0
+request_input_max = 200000
+note = "The November 19 official notice dates API redirection to December 1, 2026. Until then the Pro single-request 200K tariff applies. This new observation does not rewrite November 15-18 historical estimates from the previous notice."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-11-19"
+input_per_million = 2.5
+output_per_million = 15
+cached_input_per_million = 0.25
+valid_until = "2026-11-30"
+request_input_min = 200001
+note = "The November 19 official notice dates API redirection to December 1, 2026. Until then the Pro single-request 200K tariff applies. This new observation does not rewrite November 15-18 historical estimates from the previous notice."
+
+[[prices]]
+scope = "antigravity"
+model = "gemini-2.5-pro"
+reference = "provider-google-20261119"
+valid_from = "2026-12-01"
+input_per_million = 0.75
+output_per_million = 3.75
+cached_input_per_million = 0.075
+valid_until = "2026-12-31"
+note = "Official retired-ID redirect begins December 1, 2026 and is billed as Gemini 3.8 Flash. The existing January 2027 period retains the announced later Flash rates."
